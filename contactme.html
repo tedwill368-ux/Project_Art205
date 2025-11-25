@@ -6,32 +6,49 @@
     <title>Contact Ted</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-        <div class="cont-container">
-        
-        <header class="competition"> 
-                <a href="#" class="logo">Portfolio</a>
 
-           <nav>
-            <ul type="none" class="navbar">
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="project.html">projects</a></li>
-                <li><a href="contactme.html">Contact Me</a></li>
+<body>
+    <div class="cont-container">
+        <header class="competition"> 
+            <a href="Index.html" class="logo">Portfolio</a>
+
+            
+            <nav>
+              <ul type="none" class="navbar" id="navLinks">
+                    <li><a href="Home.html" target="_self">Home</a></li>
+                    <li><a href="project.html" target="_self">projects</a></li>
+                    <li><a href="contactme.html" target="_self">Contact Me</a></li>
             </ul>
             </nav>
-       </header>
-      <div class="contactme animated">
-         <h2>Send me a quick message</h2>
-          <form action="mailto:tedwill368@gmail.com" method="post" enctype="text/plain" class="contact-form">
-            <input type="text" id="name" name="name" placeholder="Name:" required>
-            <input type="email" id="email" name="email" placeholder="Email:" required>
-            <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
-            <input type="submit" value="Send">
-          </form>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </header>
+
+        <div class="contactme animated">
+            <h2>Send me a quick message</h2>
+            <form action="mailto:tedwill368@gmail.com" method="post" enctype="text/plain" id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Name:" required>
+                <input type="email" id="email" name="email" placeholder="Email:" required>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+                <input type="submit" value="Send" id="send-btn">
+            </form>
         </div>
     </div>
-     <footer class="cont-animated">
-      <p>&copy; 2025 Ted's Portfolio - All Rights Reserved.</p>
+
+    <footer class="cont-animated">
+        <p>&copy; 2025 Ted's Portfolio - All Rights Reserved.</p>
     </footer>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3>Are you sure you want to send?</h3>
+            <div class="modal-buttons">
+                <button id="confirmYes">Yes</button>
+                <button id="confirmNo">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
