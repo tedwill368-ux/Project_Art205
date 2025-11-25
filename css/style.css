@@ -10,7 +10,7 @@ body{
     background: url("fine.jpg") no-repeat center center/cover;
     padding: 50px 5%;
 }
-.container{
+.Index-container{
     position: relative;
     height: 100%;
     background: rgba(255, 255, 255, 0.1);
@@ -75,48 +75,44 @@ header{
     display: flex;
     align-items: center;
     padding: 50px 5% 0;
-    gap: 20px;
+    gap: 2rem;
     height: 100%;
     color: #fff;
     animation-delay: 1s;
 }
 
 .home-details h1{
-    font-size: 50px;
+    font-size: 4rem;
     line-height: 1.2;
 }
 .home-details h2{
-    font-size: 25px;
+    font-size: 2rem;
+    margin-left: 10px;
 }
 .home-details p{
-    margin: 10px 0 20px;
+    margin: 5% 0 2%;
+    line-height: 1.5;
 }
-.learn-more-btn{
-    display: inline-block;
-    padding: 10px 30px;
-    background: #fff;
-    border: 2px solid #fff;
-    border-radius: 40px;
-    box-shadow: 0 0 10px #fff;
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-    transition: .2s;
+#Click-my-pic{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 0;
 }
 
-.learn-more-btn:hover{
-    background: transparent;
-    color: #fff;
-    box-shadow: none;
-}
+
 .home-image .imagebox{
     position: relative;
     width: 25vw;
     height: 25vw;
     border: 2px solid #fff;
-    border-radius: 50%;
+    border-radius: 10px;
     box-shadow: 0 0 50px #fff;
     overflow: hidden;
+    transition: .5s;
 }
 .home-image .imagebox img{
     position: absolute;
@@ -124,6 +120,14 @@ header{
     object-fit: cover;
     display: block;
     top: 0px;
+}
+.home-image .imagebox:hover{
+    width: 26vw;
+    height: 26vw;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.479);
+    border: 2px solid rgba(0, 0, 0, 0.355);
+    position: relative;
+
 }
 footer p{
     justify-content: center;
@@ -133,35 +137,9 @@ footer p{
     font-weight: 600;
 
 }
-.skills{
-    padding: 20px;
-    position: fixed;
-    z-index: 999;
-    display: none;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    color: #7dc7f5;
-    top: 0;
-    left: 0;
 
-}
-.modal-content{
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 20px;
-}
-
-.close{
-    float: none;
-    cursor: pointer;
-    font-size: 24px;
-}
 /* biography */
-.bio-container, .proj-container{
+.bio-container, .Home-container{
     position: relative;
     height: 100%;
     background: rgba(255, 255, 255, 0.1);
@@ -196,7 +174,7 @@ footer p{
 }
 .bio-btn{
     width: 40vw;
-    padding: 50px;
+    padding: 2.35rem;
     border-radius: 10px;
     border: 1px solid  rgba(194, 202, 204, 0.438);
     background-color: rgba(208, 219, 224, 0.486);
@@ -227,4 +205,81 @@ footer p{
     display: grid;
     grid-template-columns: 100px 100px;
     grid-template-rows: 100px 100px;
+}
+/* contact */
+.cont-container{
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    box-shadow: 0 0 50px rgb(0, 0, 0, .4);
+    backdrop-filter: blur(20px);
+    align-content: center;
+}
+.contactme h2{
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    transform: scaleX(0);
+    animation: expand 1s forwards;
+
+}
+@keyframes expand {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.contactme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    width: 50%;
+    border-radius: 15px;
+}
+form input, form textarea{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: poppins, sans-serif;
+}
+/* project */
+.proj-container {
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    box-shadow: 0 0 50px rgb(0, 0, 0, .4);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projects{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    column-gap: 5vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transform: scale(0);
+    animation: zoom-in 1s forwards;
+}
+.proj1, .proj2{
+    width: 100%;
+    height: 100%;
 }
