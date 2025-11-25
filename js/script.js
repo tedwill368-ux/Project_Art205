@@ -1,45 +1,25 @@
-window.onload = function () {
-    const modal = document.getElementById("learn-more-modal");
-    const openBtn = document.querySelector(".learn-more-btn");
-    const closeBtn = document.querySelector(".close");
+// Bio modal logic
+const bioModal = document.getElementById("bioModal");
+const profilePic = document.getElementById("profilePic");
+const closeBtn = document.getElementById("biocloseModal");
 
-    openBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        modal.style.display = "block";
-    });
+profilePic.onclick = function() {
+    bioModal.style.display = "block";
+}
 
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
+closeBtn.onclick = function() {
+    bioModal.style.display = "none";
+}
 
-    window.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-};
-const buttons = document.querySelectorAll('.bio-btn');
-const views = document.querySelectorAll('.view-text');
+window.onclick = function(event) {
+    if (event.target == bioModal) {
+        bioModal.style.display = "none";
+    }
+}
 
-// Hide all views at first
-views.forEach(v => v.style.display = 'none');
+// Navigation menu toggle
+//================================================================================================================================
 
-buttons.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-
-        // Remove active from all buttons
-        buttons.forEach(b => b.classList.remove('active'));
-
-        // Add active class to the clicked button
-        btn.classList.add('active');
-
-        // Hide all views
-        views.forEach(v => v.style.display = 'none');
-
-        // Show the matching view by index
-        views[index].style.display = 'block';
-    });
-});
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("show");
 }
@@ -56,7 +36,8 @@ document.addEventListener("click", function(e) {
 });
 
 
-
+// Contact form modal logic
+//================================================================================================================================
 const sendBtn = document.getElementById("send-btn");
 const modal = document.getElementById("confirmModal");
 const confirmYes = document.getElementById("confirmYes");

@@ -3,52 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ted's Porfolio</title>
+    <title>Ted's Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-    <body>
-       <div class="Home-container">
+<body>
+    <div class="Home-container">
         <header class="animated"> 
-            <a href="Index.html" class="logo">Portfolio</a>
-
+            <a href="#" class="logo">Portfolio</a>
             <nav>
                 <ul type="none" class="navbar" id="navLinks">
                     <li><a href="Home.html" target="_self">Home</a></li>
-                    <li><a href="project.html" target="_self">projects</a></li>
+                    <li><a href="project.html" target="_self">Projects</a></li>
                     <li><a href="contactme.html" target="_self">Contact Me</a></li>
                 </ul>
             </nav>
-            <div class="menu-icon" onclick="toggleMenu()">
-                ☰
-            </div>
-
-        
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
         </header>
-          <section class="home animated">
+
+        <section class="home animated">
             <div class="home-details">
-                <h1>Ted C. Williams, jr</h1>
+                <h1>Ted C. Williams, Jr</h1>
                 <h2>An IT Student</h2>
                 <p>I am a student at Starz University, pursuing a Bachelor in IT. I believe with IT, life would be made easy for every person in Liberia.
-                    There are many problems that Technology can solve in Liberia. So as a person I decided to enter the feild of Technology, to create solutions to some of those problems.
+                    There are many problems that Technology can solve in Liberia. So as a person I decided to enter the field of Technology, to create solutions to some of those problems.
                 </p>
-                <h2 id="Click-my-pic"> 
-                    Click my picture to know more about me
-                </h2>
+                <h2 id="Click-my-pic">Click my picture to know more about me</h2>
             </div>
+
             <div class="home-image">
                 <div class="imagebox">
-                    <a href="biography.html"><img src="Profile.png" alt="profile picture"></a>
+                    <img id="profilePic" src="Profile.png" alt="Profile Picture" style="cursor:pointer;">
                 </div>
-
             </div>
-          </section>
+        </section>
+
+        <!-- Modal -->
+        <div id="bioModal" class="bio-modal">
+            <div class="bio-modal-content">
+                <span id="biocloseModal" class="bio-close-btn">&times;</span>
+                <h2>Ted C. Williams, Jr</h2>
+                <p><strong>Birth:</strong> 25th May 2007, Montserrado County, Liberia</p>
+                <p><strong>Parents:</strong> Cynthia Williams & Ted C. Williams, Sr.</p>
+                <p><strong>Academics:</strong> Graduated Best Brains Academy (2024), currently studying IT at Starz University</p>
+                <p><strong>Likes:</strong> Food, Reading, Learning New Things, Basketball, Science Fiction</p>
+                <p><strong>Skills:</strong> Web Development, Cyber Security, Graphic Design, IoT</p>
+                <p><strong>Achievements:</strong> 3rd place in visual art competition, Under Write Liberia (2022)</p>
+            </div>
         </div>
 
         <footer class="home-animated">
-          <p>&copy; 2025 Ted's Portfolio - All Rights Reserved.</p>
+            <p>&copy; 2025 Ted's Portfolio - All Rights Reserved.</p>
         </footer>
-        </div>
-        <script src="js/script.js"></script> 
-    </body>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
