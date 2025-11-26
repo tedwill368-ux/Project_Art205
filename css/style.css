@@ -158,12 +158,13 @@ header{
 .bio-modal-content {
     background-color: #fff;
     margin: 10% auto;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     animation: slideDown 0.4s ease;
+
 }
 
 /* Close Button */
