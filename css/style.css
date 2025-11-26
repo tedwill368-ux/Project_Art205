@@ -1,8 +1,9 @@
+
 *{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    font-family: poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -16,7 +17,7 @@ body{
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 30px;
-    box-shadow: 0 0 50px rgb(0, 0, 0, .4);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(20px);
     transform: scale(0);
     animation: zoom-in 1s forwards;
@@ -49,6 +50,9 @@ body{
 .navbar{
     display: flex;
     gap: 30px;
+}
+.navbar li{
+    list-style: none;
 }
 .navbar a{
     text-decoration: none;
@@ -190,11 +194,7 @@ footer p{
 }
 
 
-.projects{
-    display: grid;
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 100px 100px;
-}
+/* (removed duplicate .projects block — main .projects rules appear later) */
 /* contact */
 .cont-container{
     position: relative;
@@ -202,7 +202,7 @@ footer p{
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 30px;
-    box-shadow: 0 0 50px rgb(0, 0, 0, .4);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(20px);
     align-content: center;
 }
@@ -237,12 +237,17 @@ form{
     width: 50%;
     border-radius: 15px;
 }
-form input, form textarea{
+form input, form textarea, form button{
     padding: 0.5rem;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     font-family: poppins, sans-serif;
+}
+form button:hover{
+    background: #fff;
+    cursor: pointer;
+    transition: .5s;
 }
 /* project */
 .proj-container {
@@ -251,7 +256,7 @@ form input, form textarea{
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 30px;
-    box-shadow: 0 0 50px rgb(0, 0, 0, .4);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
@@ -288,7 +293,7 @@ form input, form textarea{
     transform: scale(1.05);
 }   
 
-/* Modal Background */
+    /* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -301,39 +306,34 @@ form input, form textarea{
     justify-content: center;
     align-items: center;
 }
-
-/* Modal Box */
-.modal-content {
+    .modal.show {
+    display: flex;
+}
+    .modal-content {
     background: #fff;
-    color: #111;
     padding: 25px;
     width: 90%;
     max-width: 320px;
     border-radius: 10px;
     text-align: center;
 }
-
-/* Buttons */
-.modal-buttons {
+    .modal-buttons {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
-
-.modal-buttons button {
+    .modal-buttons button {
     padding: 8px 20px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
 }
-
-#confirmYes {
-    background: #0a0;
+    #confirmYes {
+    background: rgb(0, 0, 0);
     color: white;
 }
-
-#confirmNo {
+    #confirmNo {
     background: #c00;
     color: white;
 }
@@ -385,7 +385,7 @@ form input, form textarea{
     }
 
     .home-details p {
-        font-size: 0.5remem;
+        font-size: 0.8rem;
     }
 
     #Click-my-pic {

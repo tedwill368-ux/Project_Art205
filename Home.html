@@ -10,14 +10,14 @@
     <div class="Home-container">
         <header class="animated"> 
             <a href="#" class="logo">Portfolio</a>
-            <nav>
-                <ul type="none" class="navbar" id="navLinks">
+            <nav aria-label="Main navigation">
+                <ul class="navbar" id="navLinks">
                     <li><a href="Home.html" target="_self">Home</a></li>
                     <li><a href="project.html" target="_self">Projects</a></li>
                     <li><a href="contactme.html" target="_self">Contact Me</a></li>
                 </ul>
             </nav>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <button class="menu-icon" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
         </header>
 
         <section class="home animated">
@@ -27,12 +27,12 @@
                 <p>I am a student at Starz University, pursuing a Bachelor in IT. I believe with IT, life would be made easy for every person in Liberia.
                     There are many problems that Technology can solve in Liberia. So as a person I decided to enter the field of Technology, to create solutions to some of those problems.
                 </p>
-                <h2 id="Click-my-pic">Click my picture to know more about me</h2>
+                <p id="Click-my-pic" class="click-instruction">Click my picture to know more about me</p>
             </div>
 
             <div class="home-image">
                 <div class="imagebox">
-                    <img id="profilePic" src="Profile.png" alt="Profile Picture" style="cursor:pointer;">
+                    <img id="profilePic" src="Profile.png" alt="Ted C. Williams — profile" style="cursor:pointer;">
                 </div>
             </div>
         </section>
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <footer class="home-animated">
+        <footer class="animated">
             <p>&copy; 2025 Ted's Portfolio - All Rights Reserved.</p>
         </footer>
     </div>

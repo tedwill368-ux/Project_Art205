@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +26,12 @@
 
         <div class="contactme animated">
             <h2>Send me a quick message</h2>
-            <form action="mailto:tedwill368@gmail.com" method="post" enctype="text/plain" id="contact-form">
-                <input type="text" id="name" name="name" placeholder="Name:" required>
-                <input type="email" id="email" name="email" placeholder="Email:" required>
-                <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
-                <input type="submit" value="Send" id="send-btn">
-            </form>
+            <form id="contact-form">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+            <button type="button" id="send-btn">Send</button>
+        </form>
         </div>
     </div>
 
@@ -38,16 +39,17 @@
         <p>&copy; 2025 Ted's Portfolio - All Rights Reserved.</p>
     </footer>
 
-    <!-- Confirmation Modal -->
-    <div id="confirmModal" class="modal">
-        <div class="modal-content">
-            <h3>Are you sure you want to send?</h3>
-            <div class="modal-buttons">
-                <button id="confirmYes">Yes</button>
-                <button id="confirmNo">No</button>
+
+    <!-- Modal -->
+        <div id="confirmModal" class="modal">
+            <div class="modal-content">
+                <p>Are you sure you want to submit this form?</p>
+                <div class="modal-buttons">
+                    <button id="confirmYes">Confirm</button>
+                    <button id="confirmNo">Decline</button>
+                </div>
             </div>
         </div>
-    </div>
 
     <script src="js/script.js"></script>
 </body>
